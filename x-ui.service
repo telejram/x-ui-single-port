@@ -1,0 +1,14 @@
+[Unit]
+Description=x-ui Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/x-ui/
+ExecStart=/usr/local/x-ui/x-ui
+Restart=always
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
