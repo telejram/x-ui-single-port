@@ -74,8 +74,10 @@ fi
 install_base() {
     if [[ x"${release}" == x"centos" ]]; then
         yum install wget curl tar -y
+        yum install unzip -y
     else
         apt install wget curl tar -y
+        apt install unzip -y
     fi
 }
 
